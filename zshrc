@@ -96,5 +96,36 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+# expand functions in the prompt
+setopt prompt_subst
+
+# prompt
+export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
+
+# ignore duplicate history entries
+setopt histignoredups
+
+# keep TONS of history
+export HISTSIZE=4096
+
+# look for ey config in project dirs
+export EYRC=./.eyrc
+
+# automatically pushd
+setopt auto_pushd
+export dirstacksize=5
+
+# awesome cd movements from zshkit
+setopt AUTOCD
+setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
+setopt cdablevars
+
+# Try to correct command line spelling
+setopt CORRECT CORRECT_ALL
+
+# Enable extended globbing
+setopt EXTENDED_GLOB
+
+if [ -e "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi
