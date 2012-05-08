@@ -43,10 +43,10 @@ setopt extendedglob
 # Allow [ or ] whereever you want
 unsetopt nomatch
 
-# vi mode
-bindkey -v
-bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
+# emacs mode
+bindkey -e
+
+bindkey ' ' magic-space
 
 # handy keybindings
 bindkey "^A" beginning-of-line
@@ -144,3 +144,8 @@ current() {
 }
 
 current
+
+setopt INC_APPEND_HISTORY
+setopt AUTO_LIST
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END

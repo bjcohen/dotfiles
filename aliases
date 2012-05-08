@@ -6,12 +6,16 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+alias la-'ls -Alh'
 alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
 alias e='$EDITOR'
 alias v='$VISUAL'
+alias psgrep='pa -A | grep'
+alias gentags="find . -name '*.[ch]p*' | xargs etags"
+alias xterm="xterm -fg #779181 -bg #002c37"
 
 # git
 alias gci="git pull --rebase && rake && git push"
