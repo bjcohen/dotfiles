@@ -1,9 +1,11 @@
 # give us access to ^Q
 stty -ixon
 
-# vi mode
-bindkey -v
+# emacs mode
+bindkey -e
 bindkey "^F" vi-cmd-mode
+
+bindkey ' ' magic-space
 
 # handy keybindings
 bindkey "^A" beginning-of-line
