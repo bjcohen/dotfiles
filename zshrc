@@ -89,10 +89,9 @@ setopt AUTO_LIST
 setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
 
-source $HOME/.profile
-
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
