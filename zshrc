@@ -1,37 +1,7 @@
-# load our own completion functions
-fpath=(~/.zsh/completion $fpath)
-
-# completion
-autoload -U compinit
-compinit
-
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
 done
-
-# makes color constants available
-autoload -U colors
-colors
-
-# enable colored output from ls, etc
-export CLICOLOR=1
-
-# history settings
-setopt hist_ignore_all_dups inc_append_history
-HISTFILE=~/.zhistory
-HISTSIZE=4096
-SAVEHIST=4096
-
-# awesome cd movements from zshkit
-setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
-DIRSTACKSIZE=5
-
-# Enable extended globbing
-setopt extendedglob
-
-# Allow [ or ] whereever you want
-unsetopt nomatch
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
@@ -79,12 +49,6 @@ setopt prompt_subst
 
 # ignore duplicate history entries
 setopt histignoredups
-
-# keep TONS of history
-export HISTSIZE=4096
-
-# look for ey config in project dirs
-export EYRC=./.eyrc
 
 # automatically pushd
 setopt auto_pushd
