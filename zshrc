@@ -68,6 +68,7 @@ _load_settings() {
   if [ -d "$_dir" ]; then
     if [ -d "$_dir/pre" ]; then
       for config in "$_dir"/pre/**/*(N-.); do
+        if [ ${config:e} = "zwc" ] ; then continue ; fi
         . $config
       done
     fi
@@ -81,7 +82,7 @@ _load_settings() {
           :
           ;;
         *)
-          if [ -f $config ]; then
+          if [[ -f $config && ${config:e} != "zwc" ]]; then
             . $config
           fi
           ;;
@@ -90,6 +91,7 @@ _load_settings() {
 
     if [ -d "$_dir/post" ]; then
       for config in "$_dir"/post/**/*(N-.); do
+        if [ ${config:e} = "zwc" ] ; then continue ; fi
         . $config
       done
     fi
@@ -128,7 +130,7 @@ if [ -e "$HOME/.zshrc.local" ]; then
   source "$HOME/.zshrc.local"
 fi
 
-# 
+#
 
 export CURRENT_PROJECT_PATH=$HOME/.current-project
 function chpwd {
@@ -149,3 +151,9 @@ setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
 
 source $HOME/.profile
+
+# Local config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
