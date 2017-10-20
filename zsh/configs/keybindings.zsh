@@ -3,7 +3,7 @@ stty -ixon
 
 # emacs mode
 bindkey -e
-bindkey "^F" vi-cmd-mode
+# bindkey "^F" vi-cmd-mode
 
 bindkey ' ' magic-space
 
