@@ -75,7 +75,7 @@ if executable('ag')
 endif
 
 " Color scheme
-colorscheme github
+"colorscheme github
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -126,7 +126,7 @@ nnoremap <Leader>l :call RunLastSpec()<CR>
 nnoremap <Leader>r :RunInInteractiveShell<space>
 
 " Treat <li> and <p> tags like the block tags they are
-let g:html_indent_tags = 'li\|p'
+" let g:html_indent_tags = 'li\|p'
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow

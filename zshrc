@@ -2,11 +2,12 @@
 git_prompt_info() {
   current_branch=$(git current-branch 2> /dev/null)
   if [[ -n $current_branch ]]; then
-    echo " %{$fg_bold[green]%}$current_branch%{$reset_color%}"
+    echo "%{$fg_bold[green]%}$current_branch%{$reset_color%}"
   fi
 }
 setopt promptsubst
-export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
+# export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
+export PS1='[$(git_prompt_info)][${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
 
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
@@ -99,9 +100,6 @@ _load_settings "$HOME/.zsh/configs"
 # expand functions in the prompt
 setopt prompt_subst
 
-# prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
-
 # ignore duplicate history entries
 setopt histignoredups
 
@@ -149,3 +147,5 @@ setopt INC_APPEND_HISTORY
 setopt AUTO_LIST
 setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
+
+source $HOME/.profile

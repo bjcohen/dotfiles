@@ -1,0 +1,5 @@
+# Change the title of the current shell
+
+function title() {
+  echo -ne "\e]1;$1\a"
+}
