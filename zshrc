@@ -69,6 +69,10 @@ if [ -e "$HOME/.zshrc.local" ]; then
   source "$HOME/.zshrc.local"
 fi
 
+if [ -e "$HOME/.profile" ]; then
+  source "$HOME/.profile"
+fi
+
 #
 
 export CURRENT_PROJECT_PATH=$HOME/.current-project
@@ -94,4 +98,7 @@ setopt ALWAYS_TO_END
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
