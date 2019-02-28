@@ -20,7 +20,7 @@
   st = status
   up = !sh -c 'git fetch origin && git merge --no-ff origin/master'
 [core]
-  excludesfile = /Users/ben.cohen/.gitignore_global
+  excludesfile = ~/.gitignore_global
   autocrlf = input
 [merge]
   ff = only
@@ -31,7 +31,9 @@
 [include]
   path = ~/.gitconfig.local
 [format]
-  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+  pretty = %Cblue%h%Creset %Cgreen[%ad]%Creset (%an) %s
+[log]
+  date = auto:human
 [pull]
   ff-only = true
 [rebase]
