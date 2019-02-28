@@ -12,13 +12,13 @@
   co = checkout
   cob = checkout -b
   com = checkout master
-  pf = push --force-with-lease
-  st = status
-  up = !git fetch origin && git merge --no-ff origin/master
   hist = log --graph --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %C(magenta)[%an]%Creset %Cgreen(%ad)%Creset' --date=relative
-  rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
-  mpr = !sh -c 'git commit -m $1 && git push && hub pull-request -l mdi -l wip -b $2'
   mm = merge --no-ff origin/master
+  mpr = !sh -c 'git commit -m $1 && git push && hub pull-request -l mdi -l wip -b $2'
+  pf = push --force-with-lease
+  rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
+  st = status
+  up = !sh -c 'git fetch origin && git merge --no-ff origin/master'
 [core]
   excludesfile = /Users/ben.cohen/.gitignore_global
   autocrlf = input
@@ -34,15 +34,5 @@
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [pull]
   ff-only = true
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
-[filter "hawser"]
-  clean = git hawser clean %f
-  smudge = git hawser smudge %f
-  required = true
 [rebase]
   autostash = true
-[user]
-  name = Ben Cohen
-  email = ben.cohen@addepar.com

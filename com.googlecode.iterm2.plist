@@ -447,15 +447,15 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>2407 1915 606 469 2400 1050 1200 1897 </string>
+	<string>13 338 606 469 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2068 1540 770 429 1945 1050 1200 1897 </string>
+	<string>269 107 1016 512 0 0 1680 1027 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1945 1063 1200 1884 1945 1050 1200 1897 </string>
+	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>4 593 570 400 0 0 1680 1027 </string>
+	<string>4 606 570 377 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>4 32 1676 993 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -818,13 +818,6 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>6</string>
-				</dict>
-				<key>0x67-0x100000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>7</string>
 				</dict>
 				<key>0x6a-0x100000</key>
 				<dict>
@@ -2161,7 +2154,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-12-30T18:39:05Z</date>
+	<date>2019-01-26T23:14:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -2215,6 +2208,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.7beta2</string>
+	<string>3.2.7beta3</string>
 </dict>
 </plist>
