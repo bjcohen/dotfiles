@@ -38,3 +38,6 @@
   ff-only = true
 [rebase]
   autostash = true
+[user]
+  email = ben@cohen-family.org
+  name = Ben Cohen
