@@ -5,7 +5,10 @@ git_prompt_info() {
     echo "[%{$fg_bold[green]%}$current_branch%{$reset_color%}]"
   fi
 }
+
 setopt promptsubst
-# export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
-export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+# Allow exported PS1 variable to override default prompt.
+if ! env | grep -q '^PS1='; then
+    export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+fi
 

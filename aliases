@@ -31,7 +31,6 @@ alias s="rspec"
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Include custom aliases
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
-
-# Kubernetes
-alias k="kubectl"
+if [[ -f ~/.aliases.local ]]; then
+  source ~/.aliases.local
+fi

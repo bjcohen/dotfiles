@@ -1,4 +1,5 @@
 [init]
+  defaultBranch = main
   templatedir = ~/.git_template
 [push]
   default = current
@@ -41,3 +42,5 @@
 [user]
   email = ben@cohen-family.org
   name = Ben Cohen
+[diff]
+  colorMoved = zebra
