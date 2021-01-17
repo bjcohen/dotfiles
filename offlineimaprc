@@ -35,6 +35,7 @@ localrepository = LocalGmail
 remoterepository = RemoteGmail
 synclabels = yes
 labelsheader = X-Keywords
+maxage = 90
 
 [Repository LocalGmail]
 type = GmailMaildir
@@ -47,3 +48,5 @@ remotepasseval = get_pass('GmailApp')
 
 ssl = yes
 sslcacertfile = OS-DEFAULT
+
+folderfilter = lambda fn: fn not in ['[Gmail]/All Mail', '[Gmail]/Important']
