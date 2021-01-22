@@ -12,3 +12,7 @@ error_symbol = "[✖](bold red) "
 [directory]
 truncation_length = 3
 fish_style_pwd_dir_length = 1
+
+[custom.lpass]
+command = "echo Lastpass not logged in!"
+when = "lpass status -q; test $? -eq 1"

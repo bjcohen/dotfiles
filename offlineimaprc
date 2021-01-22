@@ -49,4 +49,4 @@ remotepasseval = get_pass('GmailApp')
 ssl = yes
 sslcacertfile = OS-DEFAULT
 
-folderfilter = lambda fn: fn not in ['[Gmail]/All Mail', '[Gmail]/Important']
+folderfilter = lambda fn: fn not in ['[Gmail]/Important']
