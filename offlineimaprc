@@ -6,7 +6,6 @@ pythonfile = ~/.offlineimap.py
 localrepository = LocalIonos
 remoterepository = RemoteIonos
 quick = 10
-postsynchook = mu index
 
 [Repository LocalIonos]
 type = Maildir
