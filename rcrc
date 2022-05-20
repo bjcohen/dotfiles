@@ -1,4 +1,3 @@
-EXCLUDES="README*.md LICENSE"
+EXCLUDES="*.md LICENSE"
 DOTFILES_DIRS="$HOME/personal/dotfiles-local $HOME/personal/dotfiles"
 COPY_ALWAYS="git_template/HEAD"
-
