@@ -793,7 +793,7 @@
 	<key>SuppressRestartAnnouncement</key>
 	<true/>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>6</integer>
+	<integer>5</integer>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WordCharacters</key>
