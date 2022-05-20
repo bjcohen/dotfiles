@@ -13,6 +13,6 @@ error_symbol = "[✖](bold red) "
 truncation_length = 3
 fish_style_pwd_dir_length = 1
 
-[custom.lpass]
-command = "echo Lastpass not logged in!"
-when = "lpass status -q; test $? -eq 1"
+[custom.bw]
+command = "echo \"No Bitwarden session - open one with export BW_SESSION=\\`bw unlock --raw\\`\""
+when = "$BW_SESSION"
