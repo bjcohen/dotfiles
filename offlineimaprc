@@ -1,5 +1,5 @@
 [general]
-accounts = Ionos, Gmail
+accounts = Ionos
 pythonfile = ~/.offlineimap.py
 
 [Account Ionos]
