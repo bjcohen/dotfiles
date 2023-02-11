@@ -98,3 +98,12 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(starship init zsh)"
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi

@@ -10,6 +10,8 @@
 	<string>6CE2BB37-A187-4801-8A5B-C01338FB24E2</string>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
