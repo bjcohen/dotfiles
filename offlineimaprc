@@ -22,7 +22,7 @@ remotehost = imap.1and1.com
 remoteusereval = get_user('ionos.com')
 remotepasseval = get_pass('ionos.com')
 
-folderfilter = lambda fn: fn not in ['Spam', 'Deleted Messages'] and not fn.startswith('Archive')
+folderfilter = lambda fn: fn not in ['Deleted Messages'] and not fn.startswith('Archive')
 startdate = 2020-01-01
 
 maxconnections = 5
