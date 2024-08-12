@@ -79,7 +79,7 @@ current() {
   fi
 }
 
-current
+# current
 
 setopt INC_APPEND_HISTORY
 setopt AUTO_LIST
